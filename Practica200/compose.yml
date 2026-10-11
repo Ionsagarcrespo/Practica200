@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mariadb:11.4
+    container_name: mariadb-practica200
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: "12345Abcde"
+      MARIADB_DATABASE: practica200
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./practica200.sql:/docker-entrypoint-initdb.d/01-practica200.sql:ro
+
+volumes:
+  mariadb_data:
