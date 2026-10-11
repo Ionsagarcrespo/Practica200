@@ -15,7 +15,7 @@ public class DoctorDaoImpl implements DoctorDao{
     @Override
     public int add(Doctor doctor) {
 
-        String query = "INSERT INTO doctors (name, lastname, dni, salary, speciality) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO doctor (name, lastname, dni, salary, speciality) VALUES (?, ?, ?, ?, ?)";
 
         int resul = 0;
 
@@ -48,7 +48,7 @@ public class DoctorDaoImpl implements DoctorDao{
     @Override
     public void delete(int id) {
 
-        String query = "DELETE FROM doctors WHERE id=?";
+        String query = "DELETE FROM doctor WHERE id=?";
 
         try {
 
@@ -73,7 +73,7 @@ public class DoctorDaoImpl implements DoctorDao{
     @Override
     public Doctor getDoctor(int id) {
 
-        String query = "SELECT * FROM doctors WHERE id=?";
+        String query = "SELECT * FROM doctor WHERE id=?";
 
         Doctor doctor = null;
 
@@ -118,7 +118,7 @@ public class DoctorDaoImpl implements DoctorDao{
         ArrayList<Doctor> doctors =
                 new ArrayList<>();
 
-        String query = "SELECT * FROM doctors";
+        String query = "SELECT * FROM doctor";
 
         try {
             PreparedStatement ps =
@@ -157,7 +157,7 @@ public class DoctorDaoImpl implements DoctorDao{
     @Override
     public boolean update(Doctor doctor) {
 
-        String query = "UPDATE doctors SET name=?, lastname=?, dni=?, salary=?, speciality=? WHERE id=?";
+        String query = "UPDATE doctor SET name=?, lastname=?, dni=?, salary=?, speciality=? WHERE id=?";
 
         int resul = 0;
 
@@ -191,7 +191,7 @@ public class DoctorDaoImpl implements DoctorDao{
     @Override
     public Doctor getDoctorByPatientId(int patientId) {
 
-        String query ="SELECT d. FROM doctors d, patients WHERE d.id = p.doctor_id AND p.id = ?";
+        String query ="SELECT d. FROM doctor d, patients WHERE d.id = p.doctor_id AND p.id = ?";
 
         Doctor doctor = null;
 

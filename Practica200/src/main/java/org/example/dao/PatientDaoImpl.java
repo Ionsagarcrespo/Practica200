@@ -17,7 +17,7 @@ public class PatientDaoImpl implements PatientDao {
     @Override
     public int add(Patient patient) {
 
-        String query = "INSERT INTO patients (name, lastname, dni, age, phone, disease, doctor_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO patient (name, lastname, dni, age, phone, disease, doctor_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         int resul = 0;
 
@@ -63,7 +63,7 @@ public class PatientDaoImpl implements PatientDao {
     @Override
     public void delete(int id) {
 
-        String query = "DELETE FROM patients WHERE id=?";
+        String query = "DELETE FROM patient WHERE id=?";
 
         try {
 
@@ -88,7 +88,7 @@ public class PatientDaoImpl implements PatientDao {
     @Override
     public Patient getPatient(int id) {
 
-        String query = "SELECT * FROM patients WHERE id=?";
+        String query = "SELECT * FROM patient WHERE id=?";
 
         Patient patient = null;
 
@@ -135,7 +135,7 @@ public class PatientDaoImpl implements PatientDao {
         ArrayList<Patient> patients =
                 new ArrayList<>();
 
-        String query = "SELECT * FROM patients";
+        String query = "SELECT * FROM patient";
 
         try {
 
@@ -177,7 +177,7 @@ public class PatientDaoImpl implements PatientDao {
     @Override
     public boolean update(Patient patient) {
 
-        String query = "UPDATE patients SET name=?, lastname=?, dni=?, age=?, phone=?, disease=?, doctor_id=? WHERE id=?";
+        String query = "UPDATE patient SET name=?, lastname=?, dni=?, age=?, phone=?, disease=?, doctor_id=? WHERE id=?";
 
         int resul = 0;
 
@@ -229,7 +229,7 @@ public class PatientDaoImpl implements PatientDao {
         ArrayList<Patient> patients =
                 new ArrayList<>();
 
-        String query = "SELECT * FROM patients WHERE doctor_id=?";
+        String query = "SELECT * FROM patient WHERE doctor_id=?";
 
         try {
 
