@@ -4,76 +4,84 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5246e195-e659-4edd-a53c-a804b98eb5e3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/compose.yml" afterDir="false" />
+    <list default="true" id="5246e195-e659-4edd-a53c-a804b98eb5e3" name="Changes" comment="Prueba conexion de docker con java. &#10;- Añadimos nuestro compose.yml con la configuracion de mariadb&#10;- Actualizamos el pom.xml">
+      <change afterPath="$PROJECT_DIR$/practica200.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/DoctorDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/PatientDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.012531035249575" />
-      <entry key="MS500" value="2.1201824146575126" />
-      <entry key="S2" value="6.314568448471826" />
-      <entry key="S5" value="9.50354681820226" />
-      <entry key="S10" value="11.083607873584995" />
-      <entry key="S30" value="12.675286466500905" />
-      <entry key="S60" value="13.666718401791963" />
-      <entry key="M2" value="15.288027589632774" />
-      <entry key="M5" value="18.31188727452316" />
-      <entry key="M10" value="20.239324318041284" />
-      <entry key="M15" value="21.050862283882587" />
-      <entry key="M30" value="21.96638745107685" />
-      <entry key="H1" value="22.46747908580277" />
-      <entry key="H2" value="22.729684870242274" />
-      <entry key="H4" value="22.8638125697331" />
-      <entry key="D1" value="22.977157662093433" />
-      <entry key="W1" value="22.996733253390662" />
+      <entry key="MS100" value="5.23196487031131E-9" />
+      <entry key="MS500" value="0.022066475068511796" />
+      <entry key="S2" value="0.3854191071186229" />
+      <entry key="S5" value="0.6829254482448259" />
+      <entry key="S10" value="0.8263930349687284" />
+      <entry key="S30" value="0.9384164175465404" />
+      <entry key="S60" value="0.9690403949585118" />
+      <entry key="M2" value="1.0070924368655536" />
+      <entry key="M5" value="2.9265075118989436" />
+      <entry key="M10" value="13.960062170217332" />
+      <entry key="M15" value="25.86526628202202" />
+      <entry key="M30" value="48.974359405674534" />
+      <entry key="H1" value="67.75845401721499" />
+      <entry key="H2" value="79.7837040496867" />
+      <entry key="H4" value="86.5943918263914" />
+      <entry key="D1" value="92.72224924130622" />
+      <entry key="W1" value="93.81636980868731" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.2657130544793337E-223" />
-      <entry key="MS500" value="2.958291607076852E-45" />
-      <entry key="S2" value="7.374969784728235E-12" />
-      <entry key="S5" value="3.5245534263958336E-5" />
-      <entry key="S10" value="0.0059367949487883" />
-      <entry key="S30" value="0.18107174336902382" />
-      <entry key="S60" value="0.42552525585330864" />
-      <entry key="M2" value="0.652322968975728" />
-      <entry key="M5" value="0.842917495897847" />
-      <entry key="M10" value="0.9181053838736853" />
-      <entry key="M15" value="0.9446299030948053" />
-      <entry key="M30" value="0.9719207288121833" />
-      <entry key="H1" value="0.9858604002657693" />
-      <entry key="H2" value="0.9929050308391882" />
-      <entry key="H4" value="0.9964462006747723" />
-      <entry key="D1" value="0.9994068211550192" />
-      <entry key="W1" value="0.9999152386145702" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000002404099595" />
+      <entry key="S2" value="1.0221430843204409" />
+      <entry key="S5" value="1.21781874203201" />
+      <entry key="S10" value="1.4667105548954624" />
+      <entry key="S30" value="1.7759524288321686" />
+      <entry key="S60" value="1.8982436101327742" />
+      <entry key="M2" value="2.122264644337682" />
+      <entry key="M5" value="3.0540082418267236" />
+      <entry key="M10" value="4.252451992780401" />
+      <entry key="M15" value="5.016133507099282" />
+      <entry key="M30" value="6.16900771389223" />
+      <entry key="H1" value="6.973645833243795" />
+      <entry key="H2" value="7.454854055277116" />
+      <entry key="H4" value="7.718824188890201" />
+      <entry key="D1" value="7.951886529192394" />
+      <entry key="W1" value="7.9930952541619655" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7191966603921299" />
-      <entry key="MS500" value="2.044333552065082" />
-      <entry key="S2" value="6.282674548419101" />
-      <entry key="S5" value="9.486540475685725" />
-      <entry key="S10" value="11.077727566437417" />
-      <entry key="S30" value="12.8274954145523" />
-      <entry key="S60" value="14.059539069932601" />
-      <entry key="M2" value="15.914777611060005" />
-      <entry key="M5" value="19.1409807872312" />
-      <entry key="M10" value="21.14970508591674" />
-      <entry key="M15" value="21.990139150335928" />
-      <entry key="M30" value="22.93552337070502" />
-      <entry key="H1" value="23.451918656549534" />
-      <entry key="H2" value="23.72187220096702" />
-      <entry key="H4" value="23.85989807595428" />
-      <entry key="D1" value="23.97650410935104" />
-      <entry key="W1" value="23.996639860814437" />
+      <entry key="MS100" value="1.418226871595103E-6" />
+      <entry key="MS500" value="0.08663724878655349" />
+      <entry key="S2" value="0.8987776162687893" />
+      <entry key="S5" value="1.6350908446920744" />
+      <entry key="S10" value="2.1396965658897207" />
+      <entry key="S30" value="2.65616095017846" />
+      <entry key="S60" value="2.8364717672752424" />
+      <entry key="M2" value="3.1109765924963853" />
+      <entry key="M5" value="5.967549108018225" />
+      <entry key="M10" value="18.201823170248236" />
+      <entry key="M15" value="30.872225371680855" />
+      <entry key="M30" value="55.13708616529302" />
+      <entry key="H1" value="74.72832783844318" />
+      <entry key="H2" value="87.23647697153221" />
+      <entry key="H4" value="94.31212105931644" />
+      <entry key="D1" value="100.67394519569481" />
+      <entry key="W1" value="101.80943763267967" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -87,6 +95,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.TestConnection.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -129,5 +138,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Prueba conexion de docker con java. &#10;- Añadimos nuestro compose.yml con la configuracion de mariadb&#10;- Actualizamos el pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prueba conexion de docker con java. &#10;- Añadimos nuestro compose.yml con la configuracion de mariadb&#10;- Actualizamos el pom.xml" />
   </component>
 </project>
