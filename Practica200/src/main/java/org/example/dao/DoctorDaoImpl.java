@@ -187,47 +187,38 @@ public class DoctorDaoImpl implements DoctorDao{
         return resul > 0;
     }
 
-
     @Override
-    public Doctor getDoctorByPatientId(int patientId) {
-
-        String query ="SELECT d. FROM doctor d, patients WHERE d.id = p.doctor_id AND p.id = ?";
-
+    public Doctor getDoctorByPatientId(int patient_id) {
         Doctor doctor = null;
 
-        try {
+        String sql = "SELECT d.* FROM doctor d "
+                + "INNER JOIN patient p ON d.id = p.doctor_id "
+                + "WHERE p.id = ?";
 
-            PreparedStatement ps =
-                    DatabaseConnection.getInstance()
-                            .getConnection()
-                            .prepareStatement(query);
+        try (PreparedStatement ps = DatabaseConnection
+                .getInstance().getConnection().prepareStatement(sql)) {
 
-            ps.setInt(1, patientId);
+            ps.setInt(1, patient_id);
 
-            ResultSet rs =
-                    ps.executeQuery();
-
-            if (rs.next()) {
-
-                doctor = new Doctor(
-                        rs.getInt("id"),
-                        rs.getString("name"),
-                        rs.getString("lastname"),
-                        rs.getString("dni"),
-                        rs.getDouble("salary"),
-                        rs.getString("speciality")
-                );
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    doctor = new Doctor(
+                            rs.getInt("id"),
+                            rs.getString("name"),
+                            rs.getString("lastname"),
+                            rs.getString("dni"),
+                            rs.getDouble("salary"),
+                            rs.getString("speciality")
+                    );
+                }
             }
 
-            rs.close();
-            ps.close();
-
         } catch (SQLException e) {
-
             e.printStackTrace();
         }
 
         return doctor;
     }
+
 
 }
